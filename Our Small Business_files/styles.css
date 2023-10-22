@@ -71,14 +71,12 @@ html {
     padding: 20px;
     border: 1px solid #ccc;
     margin: 10px;
-    background: #ffffff; 
-    border: 1.3px solid pink;
+    background: #f0f0f0; 
 }
 
 .label {
     margin-top: auto; 
     text-align: center;
-    font-size: 1.2rem;
 }
 
 .section-heading {
@@ -88,6 +86,7 @@ html {
 
 .image-container {
     max-width: 90%; 
+    margin-top: 10vh;
     justify-content: center;
 }
 
@@ -97,13 +96,7 @@ html {
     height: auto; 
     flex: 1;
     padding: 20px;
-    margin: 20px;
-}
-
-#post-title {
-    margin-top: 3vh;
-    font-size: 4rem;
-    margin-left: 4vh;
+    margin: 10px;
 }
 
 .post-container {
