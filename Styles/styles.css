@@ -1,5 +1,106 @@
-.header {
+html {
+    background-color: antiquewhite;
+}
+
+.front-page-header {
     background-color: pink;
     justify-content: center;
     text-align: center;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    font-size: 2vw;
+    margin-top: 5vh;
+}
+
+#sortDropdown {
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.filter-button {
+    margin-top: 3vh;
+    text-align: center;
+}
+
+.article-display {
+    margin-top: 3vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 3vw;
+    border: 1.3px solid pink;
+    padding: 5vw;
+    text-align: center;
+    background-color: white;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 598px) {
+    html {
+        background-color: antiquewhite;
+    }
+
+    .front-page-header {
+        background-color: pink;
+        justify-content: center;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        font-size: 2vw;
+        margin-top: 3vh;
+    }
+
+    #sortDropdown {
+        padding: 5px;
+        font-size: 1em;
+    }
+
+    .filter-button {
+        margin-top: 1vh;
+        text-align: center;
+    }
+
+    .article-display {
+        margin-top: 1vh;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .card {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border: 1px solid pink;
+        padding: 10px;
+        text-align: center;
+        background-color: white;
+    }
+
+    .card img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .card-row {
+        display: block;
+    }
 }
