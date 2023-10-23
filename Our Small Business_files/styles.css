@@ -71,14 +71,12 @@ html {
     padding: 20px;
     border: 1px solid #ccc;
     margin: 10px;
-    background: #ffffff; 
-    border: 1.3px solid pink;
+    background: #f0f0f0; 
 }
 
 .label {
     margin-top: auto; 
     text-align: center;
-    font-size: 1.2rem;
 }
 
 .section-heading {
@@ -88,6 +86,7 @@ html {
 
 .image-container {
     max-width: 90%; 
+    margin-top: 10vh;
     justify-content: center;
 }
 
@@ -97,13 +96,7 @@ html {
     height: auto; 
     flex: 1;
     padding: 20px;
-    margin: 20px;
-}
-
-#post-title {
-    margin-top: 3vh;
-    font-size: 4rem;
-    margin-left: 4vh;
+    margin: 10px;
 }
 
 .post-container {
@@ -164,41 +157,3 @@ html {
         display: block;
     }
 }
-main #exploreMain{
-    flex:1;
-    height:100%;
-}
-body #explorePage{
-    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
-    box-sizing:border-box;
-    display:flex;
-    flex-direction: column;
-    height:inherit;
-}
-.container{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.containerCard{
-    display:flex;
-    flex-direction: column;
-    flex: 0 0 330px;
-    background-color: white;
-    margin: 1.5rem;
-    border-radius:5px;
-    box-shadow: 0 1px 3px rgba(255, 151, 151, 0.6), 0 1px 3px rgba(255, 151, 151,0.8);
-}
-.containerCard img{
-    border-radius:5px 5px 0 0;
-    width:100%;
-}
-.containerCard p{
-    padding: .5rem 1rem;
-    flex-wrap: wrap;
-}
-#explore h1{
-    color:black;
-    margin:2rem 8rem;
-}
-
