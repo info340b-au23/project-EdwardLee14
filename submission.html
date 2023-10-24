@@ -8,41 +8,61 @@
     <title>Uploading Page</title>
 </head>
 
-<body class="submission">
-    <header class="submission_h1">
-        <h1>Upload a Post for your Business</h1>
+<body>
+    <header>
+        <ul class="navbar">
+            <li class="nav-item"><a href="login.html">Login</a></li>
+            <li class="nav-item"><a href="favorites.html">Favorites</a></li>
+            <li class="nav-item"><a href="submission.html">Upload</a></li>
+            <li class="nav-item"><a href="articles.html">Articles</a></li>
+            <li class="nav-item"><a href="index.html">Home</a></li>
+        </ul>
     </header>
-
-    <section class="user_image">
-        <div class="mb-3 imageInsert">
-            <label for="formFile" class="form-label">Insert Image Here: </label>
-            <p></p>
-            <input class="form-control chooseFile" type="file" id="formFile">
-        </div>
-    </section>
-
-    <section class="user_text_input"> 
-        <div class="mb-3 comment">
-            <label for="inputShareStory" class="form-label">Share a story about your business!</label>
-            <textarea class="form-control" id="input_story" rows="3"></textarea>
-        </div>
-        <div class="mb-3 info">
-            <label for="inputInfo" class="form-label">Provide the address, menu/pricing, and name of your business
-                please!</label>
-            <textarea class="form-control" id="input_info" rows="5"></textarea>
-        </div>
-    </section>
-
-    <section>
-        <div class="col-auto submitBtn">
-            <a class="btn btn-custom" aria-current="next" href="index.html">Submit for the Review</a>
-            <!-- <button type="submit" class="btn btn-custom">Submit for the Review</button> -->
-        </div>
-    </section>
-
+    <header class="submission_h1">
+        <h1>Post Upload</h1>
+    </header>
+    <div class="upload-page">
+        <section class="user_image">
+            <div class="custom-margin-bottom-3 custom-image-insert">
+                <label for="formFile" class="custom-form-label">Insert Image Here: </label>
+                <p></p>
+                <input class="custom-form-control custom-choose-file" type="file" id="formFile">
+            </div>
+        </section>
     
-
-
-
+        <section class="user_text_input">
+            <div class="custom-margin-bottom-3 custom-comment">
+                <label for="input_story" class="custom-form-label">Business Description/ Story</label>
+                <textarea class="custom-form-control" id="input_story" rows="3"></textarea>
+            </div>
+            <div class="custom-margin-bottom-3 custom-pricing">
+                <label for="inputPricing" class="custom-form-label">Select Pricing:</label>
+                <select class="custom-form-select" id="input_pricing">
+                    <option value="$">$</option>
+                    <option value="$$">$$</option>
+                    <option value="$$$">$$$</option>
+                    <option value="$$$$">$$$$</option>
+                </select>
+            </div>
+            <div class="custom-margin-bottom-3">
+                <label for="inputAddress" class="custom-form-label">Address:</label>
+                <input type="text" class="custom-form-control" id="input_address">
+            </div>
+            <div class="custom-margin-bottom-3">
+                <label for="inputTypeOfBusiness" class="custom-form-label">Type of Business:</label>
+                <input type="text" class="custom-form-control" id="input_type_of_business">
+            </div>
+            <div class="custom-margin-bottom-3">
+                <label for="inputBusinessName" class="custom-form-label">Business Name:</label>
+                <input type="text" class="custom-form-control" id="input_business_name">
+            </div>
+        </section>
+    
+        <section>
+            <div class="custom-col-auto custom-submit-btn">
+                <a class="custom-btn custom-btn-custom" aria-current="next" href="index.html">Upload</a>
+            </div>
+        </section>
+    </div>
 </body>
 </html>

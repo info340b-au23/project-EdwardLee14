@@ -1,60 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles/styles.css">
     <title>Document</title>
 </head>
+
 <body>
+    <header>
+        <ul class="navbar">
+            <li class="nav-item"><a href="login.html">Login</a></li>
+            <li class="nav-item"><a href="favorites.html">Favorites</a></li>
+            <li class="nav-item"><a href="submission.html">Upload</a></li>
+            <li class="nav-item"><a href="articles.html">Articles</a></li>
+            <li class="nav-item"><a href="index.html">Home</a></li>
+        </ul>
+    </header>
     <main>
         <section id="explore">
-            <h1>Explore Businesses</h1>
-            <div class="container">
-                <div class="containerCard">
-                    <!-- Card 1 -->
-                    <img src="img/restaurant sample.jpg" alt="restaurant interior">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, laborum.</p>
-                </div>
-                <div class="containerCard">
-                    <!-- Card 2 -->
-                    <img src="img/restaurant sample.jpg" alt="restaurant interior">
-                    <p>Doloremque commodi unde eaque! Et natus dolorum corrupti ut numquam.</p>
-                </div>
-                <div class="containerCard">
-                    <!-- Card 3 -->
-                    <img src="img/restaurant sample.jpg" alt="restaurant interior">
-                    <p>Odio praesentium cum nemo nesciunt architecto, quam voluptate porro inventore.</p>
-                </div>
-                <div class="containerCard">
-                    <!-- Card 4 -->
-                    <img src="img/restaurant sample.jpg" alt="restaurant interior">
-                    <p>Dignissimos consequuntur maxime harum debitis ratione, culpa iure pariatur quaerat?</p>
-                </div>
-                <div class="containerCard">
-                    <!-- Card 5 -->
-                    <img src="img/restaurant sample.jpg" alt="restaurant interior">
-                    <p>Odit id earum commodi tempora voluptatum mollitia dolorum, perspiciatis nulla!</p>
-                </div>
-                <div class="containerCard">
-                    <!-- Card 6 -->
-                    <img src="img/restaurant sample.jpg" alt="restaurant interior">
-                    <p>Odit id earum commodi tempora voluptatum mollitia dolorum, perspiciatis nulla!</p>
-                </div>
-                <div class="containerCard">
-                    <!-- Card 7 -->
-                    <img src="img/restaurant sample.jpg" alt="restaurant interior">
-                    <p>Odit id earum commodi tempora voluptatum mollitia dolorum, perspiciatis nulla!</p>
-                </div>
-                <div class="containerCard">
-                    <!-- Card 8 -->
-                    <img src="img/restaurant sample.jpg" alt="restaurant interior">
-                    <p>Odit id earum commodi tempora voluptatum mollitia dolorum, perspiciatis nulla!</p>
+            <div class="front-page-header">
+                <h1>All Businesses</h1>
+            </div>
+            <div class="filter-button">
+                <label for="sortDropdown">Sort By:</label>
+                <select id="sortDropdown">
+                    <option value="name">Name (A-Z)</option>
+                    <option value="price">Price</option>
+                    <option value="businessType">Business Type</option>
+                    <option value="distance">Distance</option>
+                </select>
+            </div>
+
+            <div class="article-display">
+                <div class="card-row">
+                    <div class="card">
+                        <a href="post.html">
+                            <img src="img/ice-store.png" alt="Product Image 1">
+                            <p class="name">Sugar and Spoon</p>
+                            <p class="price">$$$</p>
+                            <p class="type">Type: Restaurant</p>
+                            <p class="distance">Distance: 2.5 miles</p>
+                        </a>
                     </div>
+
+
+                    <div class="card">
+                        <a href="post.html">
+                            <img src="img/ice-store.png" alt="Product Image 1">
+                            <p class="name">Sugar and Spoon</p>
+                            <p class="price">$$$</p>
+                            <p class="type">Type: Restaurant</p>
+                            <p class="distance">Distance: 2.5 miles</p>
+                        </a>
+                    </div>
+
+
+                    <div class="card">
+                        <a href="post.html">
+                            <img src="img/ice-store.png" alt="Product Image 1">
+                            <p class="name">Sugar and Spoon</p>
+                            <p class="price">$$$</p>
+                            <p class="type">Type: Restaurant</p>
+                            <p class="distance">Distance: 2.5 miles</p>
+                        </a>
+                    </div>
+
                 </div>
-            </section>
+                <div class="card-row">
+                    <div class="card">
+                        <a href="post.html">
+                            <img src="img/ice-store.png" alt="Product Image 1">
+                            <p class="name">Sugar and Spoon</p>
+                            <p class="price">$$$</p>
+                            <p class="type">Type: Restaurant</p>
+                            <p class="distance">Distance: 2.5 miles</p>
+                        </a>
+                    </div>
+
+
+                    <div class="card">
+                        <a href="post.html">
+                            <img src="img/ice-store.png" alt="Product Image 1">
+                            <p class="name">Sugar and Spoon</p>
+                            <p class="price">$$$</p>
+                            <p class="type">Type: Restaurant</p>
+                            <p class="distance">Distance: 2.5 miles</p>
+                        </a>
+                    </div>
+
+
+                    <div class="card">
+                        <a href="post.html">
+                            <img src="img/ice-store.png" alt="Product Image 1">
+                            <p class="name">Sugar and Spoon</p>
+                            <p class="price">$$$</p>
+                            <p class="type">Type: Restaurant</p>
+                            <p class="distance">Distance: 2.5 miles</p>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="card-row">
+                    <div class="card">
+                        <a href="post.html">
+                            <img src="img/ice-store.png" alt="Product Image 1">
+                            <p class="name">Sugar and Spoon</p>
+                            <p class="price">$$$</p>
+                            <p class="type">Type: Restaurant</p>
+                            <p class="distance">Distance: 2.5 miles</p>
+                        </a>
+                    </div>
+
+
+                    <div class="card">
+                        <a href="post.html">
+                            <img src="img/ice-store.png" alt="Product Image 1">
+                            <p class="name">Sugar and Spoon</p>
+                            <p class="price">$$$</p>
+                            <p class="type">Type: Restaurant</p>
+                            <p class="distance">Distance: 2.5 miles</p>
+                        </a>
+                    </div>
+
+
+                    <div class="card">
+                        <a href="post.html">
+                            <img src="img/ice-store.png" alt="Product Image 1">
+                            <p class="name">Sugar and Spoon</p>
+                            <p class="price">$$$</p>
+                            <p class="type">Type: Restaurant</p>
+                            <p class="distance">Distance: 2.5 miles</p>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="card-row">
+                    <div class="card">
+                        <a href="post.html">
+                            <img src="img/ice-store.png" alt="Product Image 1">
+                            <p class="name">Sugar and Spoon</p>
+                            <p class="price">$$$</p>
+                            <p class="type">Type: Restaurant</p>
+                            <p class="distance">Distance: 2.5 miles</p>
+                        </a>
+                    </div>
+
+
+                    <div class="card">
+                        <a href="post.html">
+                            <img src="img/ice-store.png" alt="Product Image 1">
+                            <p class="name">Sugar and Spoon</p>
+                            <p class="price">$$$</p>
+                            <p class="type">Type: Restaurant</p>
+                            <p class="distance">Distance: 2.5 miles</p>
+                        </a>
+                    </div>
+
+
+                    <div class="card">
+                        <a href="post.html">
+                            <img src="img/ice-store.png" alt="Product Image 1">
+                            <p class="name">Sugar and Spoon</p>
+                            <p class="price">$$$</p>
+                            <p class="type">Type: Restaurant</p>
+                            <p class="distance">Distance: 2.5 miles</p>
+                        </a>
+                    </div>
+
+                </div>
+        </section>
         </section>
     </main>
 
 </body>
+
 </html>
