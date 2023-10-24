@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles/styles.css">
-    <title>Document</title>
+    <title>Uploading Page</title>
 </head>
-<body>
+
+<body class="submission">
+    <header class="submission_h1">
+        <h1>Upload a Post for your Business</h1>
+    </header>
+
+    <section class="user_image">
+        <div class="mb-3 imageInsert">
+            <label for="formFile" class="form-label">Insert Image Here: </label>
+            <p></p>
+            <input class="form-control chooseFile" type="file" id="formFile">
+        </div>
+    </section>
+
+    <section class="user_text_input"> 
+        <div class="mb-3 comment">
+            <label for="inputShareStory" class="form-label">Share a story about your business!</label>
+            <textarea class="form-control" id="input_story" rows="3"></textarea>
+        </div>
+        <div class="mb-3 info">
+            <label for="inputInfo" class="form-label">Provide the address, menu/pricing, and name of your business
+                please!</label>
+            <textarea class="form-control" id="input_info" rows="5"></textarea>
+        </div>
+    </section>
+
+    <section>
+        <div class="col-auto submitBtn">
+            <a class="btn btn-custom" aria-current="next" href="index.html">Submit for the Review</a>
+            <!-- <button type="submit" class="btn btn-custom">Submit for the Review</button> -->
+        </div>
+    </section>
+
     
+
+
+
 </body>
 </html>

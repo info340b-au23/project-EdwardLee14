@@ -112,6 +112,119 @@ html {
     background-color: antiquewhite;
 }
 
+
+/* Submission.css */
+
+.submission_h1{
+    text-align: center;
+    font-size: x-large;
+    color: #BA8448;
+}
+
+.submission{
+    font-size: 1.45em;
+    text-align: center;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+.user_text_input{
+    background-color: #DACBB8;
+    align-items: center;
+}
+
+.user_image {
+    background-color: #DACBB8;
+    align-items: center;
+    display: inline-block;
+    padding: 70px;
+}
+
+.user_image .imageInsert .chooseFile  {
+    text-align: center;
+    justify-content: center;
+    margin-left: 5.2em;
+}
+
+.comment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3em;
+    max-width: 1000px;
+    width: 100%;
+    margin-right:0;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3em;
+    max-width: 1000px;
+    width: 100%;
+    margin-right: 0;
+}
+
+.submit{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.submit .button {
+    font-size: 2em;
+}
+
+.btn-custom {
+    font-size: 1em;
+    background-color: #b1997c;
+    color: white;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+/* End of submission css */
+
+main #exploreMain{
+    flex:1;
+    height:100%;
+}
+body #explorePage{
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    box-sizing:border-box;
+    display:flex;
+    flex-direction: column;
+    height:inherit;
+}
+.container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.containerCard{
+    display:flex;
+    flex-direction: column;
+    flex: 0 0 330px;
+    background-color: white;
+    margin: 1.5rem;
+    border-radius:5px;
+    box-shadow: 0 1px 3px rgba(255, 151, 151, 0.6), 0 1px 3px rgba(255, 151, 151,0.8);
+}
+.containerCard img{
+    border-radius:5px 5px 0 0;
+    width:100%;
+}
+.containerCard p{
+    padding: .5rem 1rem;
+    flex-wrap: wrap;
+}
+#explore h1{
+    color:black;
+    margin:2rem 8rem;
+}
+
+
+
 @media (max-width: 598px) {
     html {
         background-color: antiquewhite;
@@ -162,43 +275,24 @@ html {
 
     .card-row {
         display: block;
+
     }
+
+    .submission{
+        font-size: 1.2em;
+        text-align: center;
+        margin-left: 1em;
+        margin-right: 3em;
+    }
+
+    
+
+
+
+
+
+
 }
-main #exploreMain{
-    flex:1;
-    height:100%;
-}
-body #explorePage{
-    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
-    box-sizing:border-box;
-    display:flex;
-    flex-direction: column;
-    height:inherit;
-}
-.container{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.containerCard{
-    display:flex;
-    flex-direction: column;
-    flex: 0 0 330px;
-    background-color: white;
-    margin: 1.5rem;
-    border-radius:5px;
-    box-shadow: 0 1px 3px rgba(255, 151, 151, 0.6), 0 1px 3px rgba(255, 151, 151,0.8);
-}
-.containerCard img{
-    border-radius:5px 5px 0 0;
-    width:100%;
-}
-.containerCard p{
-    padding: .5rem 1rem;
-    flex-wrap: wrap;
-}
-#explore h1{
-    color:black;
-    margin:2rem 8rem;
-}
+
+
 
