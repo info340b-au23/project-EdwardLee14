@@ -1,151 +1,46 @@
 import React from 'react';
 import Navbar from './components/navbar.js';
 import Filter from './components/filter.js';
+import Card from './components/card.js';
 
-const articlesPage = () => {
+const Articles = () => {
     return (
         <div>
-            <Navbar />
             <Filter />
-            <div class="article-display">
-                <div class="card-row">
-                    <div class="card">
-                        <a href="post.html">
-                            <img src="img/ice-store.png" alt="Product Image 1"></img>
-                            <p class="name">Sugar and Spoon</p>
-                            <p class="price">$$$</p>
-                            <p class="type">Type: Restaurant</p>
-                            <p class="distance">Distance: 2.5 miles</p>
-                        </a>
-                    </div>
-
-
-                    <div class="card">
-                        <a href="post.html">
-                            <img src="img/ice-store.png" alt="Product Image 1"></img>
-                            <p class="name">Sugar and Spoon</p>
-                            <p class="price">$$$</p>
-                            <p class="type">Type: Restaurant</p>
-                            <p class="distance">Distance: 2.5 miles</p>
-                        </a>
-                    </div>
-
-
-                    <div class="card">
-                        <a href="post.html">
-                            <img src="img/ice-store.png" alt="Product Image 1"></img>
-                            <p class="name">Sugar and Spoon</p>
-                            <p class="price">$$$</p>
-                            <p class="type">Type: Restaurant</p>
-                            <p class="distance">Distance: 2.5 miles</p>
-                        </a>
-                    </div>
-
+            <div className="article-display">
+                <div className="card-row">
+                    <Card/>
+                    <Card/>
+                    <Card/>
                 </div>
-                <div class="card-row">
-                    <div class="card">
-                        <a href="post.html">
-                            <img src="img/ice-store.png" alt="Product Image 1"></img>
-                            <p class="name">Sugar and Spoon</p>
-                            <p class="price">$$$</p>
-                            <p class="type">Type: Restaurant</p>
-                            <p class="distance">Distance: 2.5 miles</p>
-                        </a>
-                    </div>
-
-
-                    <div class="card">
-                        <a href="post.html">
-                            <img src="img/ice-store.png" alt="Product Image 1"></img>
-                            <p class="name">Sugar and Spoon</p>
-                            <p class="price">$$$</p>
-                            <p class="type">Type: Restaurant</p>
-                            <p class="distance">Distance: 2.5 miles</p>
-                        </a>
-                    </div>
-
-
-                    <div class="card">
-                        <a href="post.html">
-                            <img src="img/ice-store.png" alt="Product Image 1"></img>
-                            <p class="name">Sugar and Spoon</p>
-                            <p class="price">$$$</p>
-                            <p class="type">Type: Restaurant</p>
-                            <p class="distance">Distance: 2.5 miles</p>
-                        </a>
-                    </div>
-
+                <div className="card-row">
+                    <Card/>
+                    <Card/>
+                    <Card/>
                 </div>
-                <div class="card-row">
-                    <div class="card">
-                        <a href="post.html">
-                            <img src="img/ice-store.png" alt="Product Image 1"></img>
-                            <p class="name">Sugar and Spoon</p>
-                            <p class="price">$$$</p>
-                            <p class="type">Type: Restaurant</p>
-                            <p class="distance">Distance: 2.5 miles</p>
-                        </a>
-                    </div>
-
-
-                    <div class="card">
-                        <a href="post.html">
-                            <img src="img/ice-store.png" alt="Product Image 1"></img>
-                            <p class="name">Sugar and Spoon</p>
-                            <p class="price">$$$</p>
-                            <p class="type">Type: Restaurant</p>
-                            <p class="distance">Distance: 2.5 miles</p>
-                        </a>
-                    </div>
-
-
-                    <div class="card">
-                        <a href="post.html">
-                            <img src="img/ice-store.png" alt="Product Image 1"></img>
-                            <p class="name">Sugar and Spoon</p>
-                            <p class="price">$$$</p>
-                            <p class="type">Type: Restaurant</p>
-                            <p class="distance">Distance: 2.5 miles</p>
-                        </a>
-                    </div>
-
+                <div className="card-row">
+                    <Card/>
+                    <Card/>
+                    <Card/>
                 </div>
-                <div class="card-row">
-                    <div class="card">
-                        <a href="post.html">
-                            <img src="img/ice-store.png" alt="Product Image 1"></img>
-                            <p class="name">Sugar and Spoon</p>
-                            <p class="price">$$$</p>
-                            <p class="type">Type: Restaurant</p>
-                            <p class="distance">Distance: 2.5 miles</p>
-                        </a>
-                    </div>
-
-
-                    <div class="card">
-                        <a href="post.html">
-                            <img src="img/ice-store.png" alt="Product Image 1"></img>
-                            <p class="name">Sugar and Spoon</p>
-                            <p class="price">$$$</p>
-                            <p class="type">Type: Restaurant</p>
-                            <p class="distance">Distance: 2.5 miles</p>
-                        </a>
-                    </div>
-
-
-                    <div class="card">
-                        <a href="post.html">
-                            <img src="img/ice-store.png" alt="Product Image 1"></img>
-                            <p class="name">Sugar and Spoon</p>
-                            <p class="price">$$$</p>
-                            <p class="type">Type: Restaurant</p>
-                            <p class="distance">Distance: 2.5 miles</p>
-                        </a>
-                    </div>
-
+                <div className="card-row">
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                </div>
+                <div className="card-row">
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                </div>
+                <div className="card-row">
+                    <Card/>
+                    <Card/>
+                    <Card/>
                 </div>
             </div>
         </div>
-        
     )
 }
+
+export default Articles;

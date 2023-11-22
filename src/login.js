@@ -1,28 +1,31 @@
 import React from 'react';
-import './Styles/styles.css'; 
+import './css/styles.css';
 
 const Login = () => {
   return (
     <div>
-      <header>
-        <ul className="navbar">
-          <li className="nav-item"><a href="login.html">Login</a></li>
-          <li className="nav-item"><a href="favorites.html">Favorites</a></li>
-          <li className="nav-item"><a href="submission.html">Upload</a></li>
-          <li className="nav-item"><a href="articles.html">Articles</a></li>
-          <li className="nav-item"><a href="index.html">Home</a></li>
-        </ul>
-      </header>
       <div className="login-box">
         <h1>Login</h1>
-        <form className="login-form">
-          <label htmlFor="username">Username:</label>
-          <input type="text" id="username" name="username" required />
+        <form className="login-form" aria-label="Login Form">
+          <label htmlFor="username">Username: </label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            aria-label="Enter your username"
+          />
           <br />
-          <label htmlFor="password">Password:</label>
-          <input type="password" id="password" name="password" required />
+          <label htmlFor="password">Password: </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            aria-label="Enter your password"
+          />
           <br />
-          <button type="submit">Login</button>
+          <button type="submit" aria-label="Submit Login">Login</button>
         </form>
       </div>
     </div>

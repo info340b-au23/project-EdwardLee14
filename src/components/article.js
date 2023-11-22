@@ -1,24 +1,17 @@
 import React from 'react';
-import './Styles/styles.css'; 
+import '../css/styles.css';
+import FavoriteButton from './fav-button';
+import photo from '../img/restaurant.jpg';
 
 const SmallBusiness = () => {
   return (
     <div>
-      <header>
-        <ul className="navbar">
-          <li className="nav-item"><a href="login.html">Login</a></li>
-          <li className="nav-item"><a href="favorites.html">Favorites</a></li>
-          <li className="nav-item"><a href="submission.html">Upload</a></li>
-          <li className="nav-item"><a href="articles.html">Articles</a></li>
-          <li className="nav-item"><a href="index.html">Home</a></li>
-        </ul>
-      </header>
       <div id="post-title">Sugar and Spoon</div>
 
       <div className="post-container">
         <div className="left-half">
           <div className="image-container">
-            <img src="img/restaurant.jpg" alt="Image of our small business store" />
+            <img src={photo} alt="Image of our small business store" />
           </div>
           <div className="label">
             <p className="name">Name: Sally's Small Business</p>
@@ -26,9 +19,7 @@ const SmallBusiness = () => {
             <p className="type">Type: Restaurant</p>
             <p className="distance">Distance: 2.5 miles</p>
           </div>
-          <div className="favorite-button">
-            <button id="explore-more-button">Favorite This!</button>
-          </div>
+          <FavoriteButton/>
         </div>
 
         <div className="right-half">
