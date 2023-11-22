@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/styles.css';
 import FavoriteButton from './fav-button';
+import StarButton from './star-buttons'
 import photo from '../img/restaurant.jpg';
 
 const SmallBusiness = () => {
@@ -29,6 +30,7 @@ const SmallBusiness = () => {
             <p>Our friendly team is here to create a warm and welcoming atmosphere for your visit. Whether you're searching for a special gift or simply exploring our store, we're ready to assist you.</p>
             <p>We're committed to giving back to the community by participating in local events and charity initiatives. Your support enables us to make a positive impact on our neighborhood.</p>
           </div>
+          <StarButton/>
         </div>
       </div>
     </div>
