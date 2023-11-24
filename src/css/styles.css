@@ -136,7 +136,6 @@ p {
 .login-form {
     text-align: center;
     margin: 0 auto;
-    padding: 55px;
 }
 
 .login-box {
@@ -455,9 +454,36 @@ body #explorePage {
     margin: 2rem 8rem;
 }
 
+.login-form label {
+    margin-bottom: 10px;
+}
+
+.login-form input {
+    margin-bottom: 10px;
+}
+
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
 @media (max-width: 598px) {
     html {
         background-color: antiquewhite;
+    }
+
+    .search-and-filter {
+        flex-direction: column;
+    }
+
+    .login-box {
+        width: 80%;
+    }
+
+    .login-form {
+        width: 80%;
     }
 
     .front-page-header {
@@ -551,39 +577,29 @@ body #explorePage {
     }
 }
 
-@media (max-width: 599px) {
-    .navbar {
-        display: none;
-    }
-
-    .hamburger-menu {
-        display: block;
-    }
-
+@media (max-width: 768px) {
     .hamburger-icon {
-        display: inline-block;
-        cursor: pointer;
-        font-size: 24px;
-        margin-right: 10px;
+      display: block;
     }
-
-    .hamburger-menu ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: none;
+  
+    .navbar {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-color: #fff;
+      width: 100%;
+      z-index: 1;
     }
-
-    .hamburger-menu ul li {
-        display: block;
-        text-align: center;
-        padding: 10px;
-        background-color: pink;
-        margin: 2px;
+  
+    .navbar.active {
+      display: flex;
     }
-
-    .hamburger-menu.active ul {
-        display: flex;
-        flex-direction: column;
+  
+    .nav-item {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
     }
-}
+  }
