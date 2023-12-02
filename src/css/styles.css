@@ -125,6 +125,10 @@ h6 {
     text-align: center;
 }
 
+#no-results {
+    text-align: center;
+}
+
 p {
     font-family: 'Lato', sans-serif;
 }

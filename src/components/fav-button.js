@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 
-const FavoriteButton = () => {
-    const [favorited, setFavorited] = useState(false);
+const FavoriteButton = (status) => {
+    const [favorited, setFavorited] = useState(status);
 
     const updateFavorite = () => {
-
         setFavorited((currentStatus) => !currentStatus);
     }
 
