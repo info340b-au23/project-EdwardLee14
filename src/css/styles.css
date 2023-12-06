@@ -15,17 +15,6 @@
     text-decoration: none;
 }
 
-.card {
-    margin-left: 3vw;
-    margin-right: 3vw;
-    margin-bottom: 3vw;
-    border: 4px solid pink;
-    padding: 5vw;
-    text-align: center;
-    background-color: white;
-    border-radius: 10px;
-}
-
 .card img {
     max-width: 100%;
     height: auto;
@@ -140,6 +129,7 @@ p {
 .login-form {
     text-align: center;
     margin: 0 auto;
+    font-size: 1.1em;
 }
 
 .login-box {
@@ -147,6 +137,7 @@ p {
     justify-content: center;
     display: flex;
     flex-direction: column;
+    margin: 5vw;
 }
 
 form {
@@ -158,10 +149,6 @@ form {
     background-color: #fff;
     width: 10vw;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.favorite-button {
-    margin-left: 305px;
 }
 
 ul.navbar {
@@ -210,13 +197,15 @@ li.nav-item a:hover {
 .upload-page {
     font-size: 1.45em;
     text-align: center;
-    margin-left: 3em;
-    margin-right: 3em;
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 5%;
+    margin-right: 10%;
 }
 
-#explore-more-button {
+#favorite-button {
     display: block;
-    width: 100px;
+    width: 10vw;
     padding: 10px;
     background-color: pink;
     justify-content: center;
@@ -252,19 +241,21 @@ li.nav-item a:hover {
     margin-left: 5vw;
     margin-right: 5vw;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .card {
-    margin-left: 3vw;
-    margin-right: 3vw;
-    margin-bottom: 3vw;
+    flex-grow: 1;
+    flex-basis: calc(33.33% - 20px); 
+    margin-bottom: 20px;
     border: 4px solid pink;
     padding: 5vw;
     text-align: center;
     background-color: white;
     border-radius: 10px;
+    max-width: 14vw;
 }
 
 .card img {
@@ -272,15 +263,11 @@ li.nav-item a:hover {
     height: auto;
 }
 
-.card-row {
-    display: flex;
-    flex-direction: row;
-}
-
 .left-half {
-    flex: 1;
-    /* background: url('restaurant.jpg') center/cover no-repeat; */
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5vh;
 }
 
 .right-half {
@@ -288,7 +275,6 @@ li.nav-item a:hover {
     display: flex;
     flex-direction: column;
     background-color: antiquewhite;
-    padding: 20px;
 }
 
 .text-box {
@@ -307,19 +293,20 @@ li.nav-item a:hover {
 }
 
 .image-container {
-    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
     justify-content: center;
 }
 
 .label {
-    margin: 20px;
+    margin: 5%;
     text-align: center;
     font-size: 1.2rem;
     border: 4px solid black;
     width: 90%;
-    /* Set a fixed width for the label */
+    max-width: 90%;
+    box-sizing: border-box;
 }
-
 .review {
     display: flex;
     flex-direction: column;
@@ -327,15 +314,14 @@ li.nav-item a:hover {
 }
 
 .image-container img {
-    display: block;
-    max-width: 100%;
+    max-width: 30vw;
     height: auto;
     flex: 1;
-    margin: 20px;
     border: 4px solid black;
     width: 100%;
-    /* Set a fixed width for the image */
+    box-sizing: border-box;
 }
+
 
 #post-title {
     margin-top: 3vh;
@@ -347,6 +333,8 @@ li.nav-item a:hover {
     display: flex;
     flex-direction: row;
     background-color: antiquewhite;
+    justify-content: center;
+    margin-top: 3vh;
 }
 
 .submission_h1 {
@@ -514,7 +502,7 @@ body #explorePage {
     }
 
     .article-display {
-        margin-top: 1vh;
+        margin-top: 5vh;
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -535,7 +523,7 @@ body #explorePage {
     }
 
     .card-row {
-        display: block;
+        flex-direction: row;
     }
 
     .submission {
@@ -557,7 +545,7 @@ body #explorePage {
 
     .card-row {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 

@@ -8,11 +8,9 @@ const FavoriteButton = (status) => {
     }
 
     return (
-        <div className="favorite-button">
-            <button id="explore-more-button" onClick={updateFavorite}>
-                {favorited ? 'Unfavorite This!' : 'Favorite This!'}
-            </button>
-        </div>
+        <button id="favorite-button" onClick={updateFavorite}>
+            {favorited ? 'Favorite This!' : 'Unfavorite This'}
+        </button>
     );
 };
 

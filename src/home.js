@@ -1,5 +1,4 @@
 import React from 'react';
-import Filter from './components/filter';
 import TopArticles from './components/topArticles';
 
 const Home = () => {

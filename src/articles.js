@@ -1,25 +1,50 @@
-// articles.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Filter from './components/filter.js';
 import Card from './components/card.js';
-import photo from './img/ice.jpg';
+import { getDatabase, ref, get } from 'firebase/database';
 
 const Articles = () => {
-    const cardData = Array.from({ length: 12 }, (_, index) => ({
-        id: index + 1,
-        name: `Sugar and Spoon`,
-        price: '$$',
-        distance: '2.5',
-        image: photo,
-        favorite: true,
-        article: "this is a demo"
-    }));
-
-    const [filteredCards, setFilteredCards] = useState(cardData);
+    const [cardData, setCardData] = useState([]);
+    const [filteredCards, setFilteredCards] = useState([]);
     const [sortOption, setSortOption] = useState('name');
 
+    useEffect(() => {
+
+        const fetchData = async () => {
+            const db = getDatabase();
+            const businessListRef = ref(db, 'businessList');
+
+            try {
+                const snapshot = await get(businessListRef);
+                const businessData = [];
+
+                snapshot.forEach((childSnapshot) => {
+                    const business = childSnapshot.val();
+
+                    businessData.push({
+                        id: business.business,
+                        name: business.business,
+                        price: business.price,
+                        distance: business.distance,
+                        image: business.image,
+                        favorite: business.favorite,
+                        article: business.article,
+                        rating: business.rating,
+                    });
+                });
+
+                setCardData(businessData);
+                setFilteredCards(businessData);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
     const handleSearch = (searchTerm) => {
-        const filtered = filteredCards.filter((card) =>
+        const filtered = cardData.filter((card) =>
             card.name.toLowerCase().includes(searchTerm.toLowerCase())
         );
         setFilteredCards(filtered);
@@ -38,6 +63,10 @@ const Articles = () => {
                 const distanceA = parseFloat(a.distance);
                 const distanceB = parseFloat(b.distance);
                 return distanceA - distanceB;
+            } else if (selectedSort === 'rating') {
+                const ratingA = parseFloat(a.rating);
+                const ratingB = parseFloat(b.rating);
+                return ratingB - ratingA;
             }
             return 0;
         });
@@ -46,27 +75,29 @@ const Articles = () => {
 
     return (
         <div>
+            <div className="front-page-header">
+                <h1><b>All Articles</b></h1>
+            </div>
             <Filter onSearch={handleSearch} onSort={handleSort} />
             <div className="article-display">
                 {filteredCards.length === 0 ? (
                     <p id='no-results'>No results found.</p>
                 ) : (
-                    Array.from({ length: Math.ceil(filteredCards.length / 3) }, (_, rowIndex) => (
-                        <div key={rowIndex} className="card-row">
-                            {filteredCards.slice(rowIndex * 3, rowIndex * 3 + 3).map((card) => (
-                                <Card
-                                    key={card.id}
-                                    name={card.name}
-                                    price={card.price}
-                                    distance={card.distance}
-                                    image={card.image}
-                                    alt={card.name}
-                                    favorite={card.favorite}
-                                    article={card.article}
-                                />
-                            ))}
-                        </div>
-                    ))
+                    <>
+                        {filteredCards.map((card) => (
+                            <Card
+                                key={card.id}
+                                name={card.name}
+                                price={card.price}
+                                distance={card.distance}
+                                image={card.image}
+                                alt={card.name}
+                                favorite={card.favorite}
+                                article={card.article}
+                                rating={card.rating}
+                            />
+                        ))}
+                    </>
                 )}
             </div>
         </div>

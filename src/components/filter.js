@@ -21,6 +21,7 @@ const Filter = ({ onSearch, onSort }) => {
                     <option value="name">Name (A-Z)</option>
                     <option value="price">Price (Low to High)</option>
                     <option value="distance">Distance (Low to High)</option>
+                    <option value="rating">Rating</option>
                 </select>
             </div>
 
