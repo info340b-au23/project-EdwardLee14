@@ -8,6 +8,7 @@ import Home from './home.js';
 import Navbar from './components/navbar.js';
 import Footer from './components/footer.js';
 import Article from './components/article.js';
+import SignUp from './signup.js';
 
 const App = () => {
     return (
@@ -21,6 +22,7 @@ const App = () => {
                     <Route path="/favorites" element={<Favorites />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/article" element={<Article />} />
+                    <Route path="/signup" element={<SignUp />} />
                 </Routes>
                 <Footer />
             </div>

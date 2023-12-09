@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { createRoot } from 'react-dom';
 import './index.css';
 import App from './App';
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDJJct1dSxNnhJaj2HazhZ3BKRG2WmqlAg",
@@ -16,6 +17,8 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export default app;
 
 const root = createRoot(document.getElementById('root'));
 root.render(
