@@ -2,7 +2,7 @@ import React from 'react';
 import '../css/styles.css';
 import { useNavigate } from 'react-router-dom';
 
-const Card = ({ name, price, distance, image, alt, favorite, article, rating }) => {
+const Card = ({ name, price, distance, image, alt, favorite, article, rating, reviews }) => {
     const cardData = {
         name,
         price,
@@ -11,8 +11,11 @@ const Card = ({ name, price, distance, image, alt, favorite, article, rating }) 
         alt,
         favorite,
         article,
-        rating
+        rating,
+        reviews
     };
+
+    const averageRating = (cardData.rating / cardData.reviews).toFixed(1);;
 
     const navigate = useNavigate();
 
@@ -27,7 +30,7 @@ const Card = ({ name, price, distance, image, alt, favorite, article, rating }) 
                 <p className="name">Name: {cardData.name}</p>
                 <p className="price">Price: {cardData.price}</p>
                 <p className="distance">Distance: {cardData.distance} miles</p>
-                <p className="rating">Rating: {cardData.rating}/5</p>
+                <p className="rating">Rating: {averageRating}/5</p>
             </div>
         </div>
     );

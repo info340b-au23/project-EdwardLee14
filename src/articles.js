@@ -30,6 +30,7 @@ const Articles = () => {
                         favorite: business.favorite,
                         article: business.article,
                         rating: business.rating,
+                        reviews: business.reviews
                     });
                 });
 
@@ -95,6 +96,7 @@ const Articles = () => {
                                 favorite={card.favorite}
                                 article={card.article}
                                 rating={card.rating}
+                                reviews={card.reviews}
                             />
                         ))}
                     </>

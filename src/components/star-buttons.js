@@ -1,17 +1,32 @@
 import React, { useState } from 'react';
 import { Rating } from 'react-simple-star-rating';
+import { getDatabase, get, set, ref, child } from 'firebase/database';
 
-function MyComponent() {
+const StarButton = ({ name }) => {
   const [rating, setRating] = useState(0);
 
-  const handleRating = (rate) => {
+  const db = getDatabase();
+
+  const handleRating = async (rate) => {
     setRating(rate);
 
+    const ratingRef = ref(db, "businessList/" + name + "/rating");
+    const reviewsRef = ref(db, "businessList/" + name + "/reviews");
+
+    const ratingSnapshot = await get(ratingRef);
+    const currentRating = ratingSnapshot.val();
+    const reviewsSnapshot = await get(reviewsRef);
+    const currentReviews = reviewsSnapshot.val();
+
+    const updatedRating = currentRating + rate;
+    const updatedReviews = currentReviews + 1;
+
+    set(ratingRef, updatedRating);
+    set(reviewsRef, updatedReviews);
   };
 
   const onPointerEnter = () => console.log('Enter');
   const onPointerLeave = () => console.log('Leave');
-  const onPointerMove = (value, index) => console.log(value, index);
 
   return (
     <div className='review'>
@@ -20,10 +35,9 @@ function MyComponent() {
         onClick={handleRating}
         onPointerEnter={onPointerEnter}
         onPointerLeave={onPointerLeave}
-        onPointerMove={onPointerMove}
       />
     </div>
   );
 }
 
-export default MyComponent;
+export default StarButton;

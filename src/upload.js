@@ -6,6 +6,7 @@ const Upload = (props) => {
     const [businessData, setBusinessData] = useState({
         favorite: false,
         rating: 0,
+        reviews: 0
     });
 
     const handleInputChange = (e) => {
