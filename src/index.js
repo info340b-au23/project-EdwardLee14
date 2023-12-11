@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import { createRoot } from 'react-dom';
 import './index.css';
 import App from './App';
-import { getAuth } from "firebase/auth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDJJct1dSxNnhJaj2HazhZ3BKRG2WmqlAg",
@@ -27,3 +27,6 @@ root.render(
   </React.StrictMode>
 );
 
+
+
+export {onAuthStateChanged};
