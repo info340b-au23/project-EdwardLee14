@@ -3,8 +3,8 @@ import '../css/styles.css';
 import FavoriteButton from './fav-button';
 import StarButton from './star-buttons';
 import { useLocation } from 'react-router-dom';
-import { onAuthStateChanged } from '../index';
-import { auth } from '../index.js';
+import { onAuthStateChanged, auth} from '../index';
+
 
 const Article = () => {
   const location = useLocation();
