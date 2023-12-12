@@ -2,9 +2,9 @@ import React from 'react';
 import '../css/styles.css';
 import { useNavigate } from 'react-router-dom';
 
-const Card = ({ name, price, distance, image, alt, favorite, article, rating, reviews }) => {
+const Card = ({ business, price, distance, image, alt, favorite, article, rating, reviews }) => {
     const cardData = {
-        name,
+        business,
         price,
         distance,
         image,
@@ -27,7 +27,7 @@ const Card = ({ name, price, distance, image, alt, favorite, article, rating, re
         <div className="card no-link-style" onClick={handleClick}>
             <img src={image} alt={alt} />
             <div>
-                <p className="name">Name: {cardData.name}</p>
+                <p className="name">Name: {cardData.business}</p>
                 <p className="price">Price: {cardData.price}</p>
                 <p className="distance">Distance: {cardData.distance} miles</p>
                 <p className="rating">Rating: {averageRating}/5</p>

@@ -1,40 +1,55 @@
 import React, { useState } from 'react';
-import { ref, set as firebaseSet } from 'firebase/database';
-import { getDatabase } from 'firebase/database';
+import { ref, set as firebaseSet, getDatabase } from 'firebase/database';
+import { getDownloadURL, uploadBytes, getStorage, ref as storageRef } from 'firebase/storage';
 
-const Upload = (props) => {
+const Upload = () => {
     const [businessData, setBusinessData] = useState({
         favorite: false,
         rating: 0,
-        reviews: 0
+        reviews: 0,
+        image: null,
     });
 
     const handleInputChange = (e) => {
-        const { id, value } = e.target;
-        setBusinessData((prevData) => ({
-            ...prevData,
-            [id]: value,
-        }));
+        const { id, value, files } = e.target;
+
+        if (files) {
+            setBusinessData((prevData) => ({
+                ...prevData,
+                [id]: files[0],
+            }));
+        } else {
+            setBusinessData((prevData) => ({
+                ...prevData,
+                [id]: value,
+            }));
+        }
     };
 
-    const handleUpload = (e) => {
+    const handleUpload = async (e) => {
         e.preventDefault();
+
         const db = getDatabase();
-        const newBusinessRef = ref(db, 'businessList/' + businessData.business);
+        const storage = getStorage();
+
+        const imageRef = storageRef(storage, 'images/' + businessData.business);
+        await uploadBytes(imageRef, businessData.image);
+
+        const imageUrl = await getDownloadURL(imageRef);
 
         const newBusiness = {
             ...businessData,
+            image: imageUrl,
         };
 
-        firebaseSet(newBusinessRef, newBusiness)
-            .then(() => {
-                console.log('Business data added successfully');
-            })
-            .catch((error) => {
-                console.error('Error adding business data: ', error);
-            });
+        const newBusinessRef = ref(db, 'businessList/' + newBusiness.business);
 
-        window.location.reload();
+        try {
+            await firebaseSet(newBusinessRef, newBusiness);
+            window.location.reload();
+        } catch (error) {
+            console.error('Error adding business data: ', error);
+        }
     };
 
     return (
@@ -83,11 +98,11 @@ const Upload = (props) => {
                             </select>
                         </div>
                         <div className="custom-margin-bottom-3">
-                            <label htmlFor="address" className="custom-form-label">Address: </label>
+                            <label htmlFor="address" className="custom-form-label">Distance from UW: </label>
                             <input
                                 type="text"
                                 className="custom-form-control"
-                                id="address"
+                                id="distance"
                                 aria-label="Business Address"
                                 onChange={handleInputChange}
                             />

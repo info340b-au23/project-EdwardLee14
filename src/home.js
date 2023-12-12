@@ -26,7 +26,7 @@ const Home = () => {
                     <p><i>Note:</i> all distances are calculated in relation to the <b>University of Washington Campus</b></p>
                 </div>
             </section>
-            <TopArticles />
+            {/* <TopArticles /> */}
         </div>
     );
 };

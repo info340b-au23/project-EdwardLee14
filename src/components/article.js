@@ -14,7 +14,6 @@ const Article = () => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (authUser) => {
-
       setUser(authUser);
     });
 
@@ -35,18 +34,20 @@ const Article = () => {
             <img src={cardData.image} alt={cardData.alt} />
           </div>
           <div className="label">
-            <p className="name">Name: {cardData.name}</p>
+            <p className="name">Name: {cardData.business}</p>
             <p className="price">Price: {cardData.price}</p>
             <p className="distance">Distance: {cardData.distance} miles</p>
             <p className="rating">Rating: {averageRating}/5</p>
           </div>
           <div id="fav-button">
-            <FavoriteButton status={cardData.favorite} />
+            {user && <FavoriteButton
+              articleId={cardData.business}
+            />}
           </div>
         </div>
         <div className="right-half">
           <div className="text-box">{cardData.article}</div>
-          {user && <StarButton name={cardData.name}/>}
+          {user && <StarButton name={cardData.business}/>}
         </div>
       </div>
     </div>

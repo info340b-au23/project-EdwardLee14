@@ -23,14 +23,15 @@ const Articles = () => {
 
                     businessData.push({
                         id: business.business,
-                        name: business.business,
+                        business: business.business,
                         price: business.price,
                         distance: business.distance,
                         image: business.image,
                         favorite: business.favorite,
                         article: business.article,
                         rating: business.rating,
-                        reviews: business.reviews
+                        reviews: business.reviews,
+                        alt: business.alt
                     });
                 });
 
@@ -55,7 +56,7 @@ const Articles = () => {
         setSortOption(selectedSort);
         const sortedCards = [...filteredCards].sort((a, b) => {
             if (selectedSort === 'name') {
-                return a.name.localeCompare(b.name);
+                return a.business.localeCompare(b.business);
             } else if (selectedSort === 'price') {
                 const countA = (a.price.match(/\$/g) || []).length;
                 const countB = (b.price.match(/\$/g) || []).length;
@@ -88,11 +89,11 @@ const Articles = () => {
                         {filteredCards.map((card) => (
                             <Card
                                 key={card.id}
-                                name={card.name}
+                                business={card.business}
                                 price={card.price}
                                 distance={card.distance}
                                 image={card.image}
-                                alt={card.name}
+                                alt={card.business}
                                 favorite={card.favorite}
                                 article={card.article}
                                 rating={card.rating}
