@@ -97,6 +97,7 @@ const Favorites = () => {
                       favorite={card.favorite}
                       article={card.article}
                       rating={card.rating}
+                      reviews={card.reviews}
                     />
                   )
                 ))}

@@ -39,9 +39,11 @@ const Navbar = () => {
         <li className="nav-item">
           <Link to="/favorites">Favorites</Link>
         </li>
-        <li className="nav-item">
-          <Link to="/upload">Upload</Link>
-        </li>
+        {auth.currentUser ? (
+          <li className="nav-item">
+            <Link to="/upload">Upload</Link>
+          </li>
+        ) : null}
         <li className="nav-item">
           <Link to="/articles">Articles</Link>
         </li>

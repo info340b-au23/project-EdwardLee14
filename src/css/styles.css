@@ -13,7 +13,9 @@
     font-size: 1.1em;
     color: black;
     text-decoration: none;
+    width: 80%;
 }
+
 
 .card img {
     max-width: 100%;
@@ -471,6 +473,10 @@ body #explorePage {
         flex-direction: column;
     }
 
+    .custom-form-label, .custom-form-control {
+        width: 50%;
+    }
+
     .login-box {
         width: 80%;
     }
@@ -509,9 +515,7 @@ body #explorePage {
     }
 
     .card {
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 10px;
+        width: 100%;
         border: 1px solid pink;
         padding: 10px;
         text-align: center;
@@ -557,11 +561,7 @@ body #explorePage {
     }
 
     .card {
-        margin-left: 5vw;
-        margin-right: 5vw;
-        margin-bottom: 5vw;
-        padding: 3vw;
-        font-size: 1.5em;
+        width: 100%;
     }
 
     .search-bar input,
@@ -573,6 +573,14 @@ body #explorePage {
 @media (max-width: 768px) {
     .hamburger-icon {
       display: block;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .article-display {
+        flex-direction: column;
     }
   
     .navbar {
