@@ -47,7 +47,7 @@ const Articles = () => {
 
     const handleSearch = (searchTerm) => {
         const filtered = cardData.filter((card) =>
-            card.name.toLowerCase().includes(searchTerm.toLowerCase())
+            card.business.toLowerCase().includes(searchTerm.toLowerCase())
         );
         setFilteredCards(filtered);
     };
