@@ -66,8 +66,8 @@ const Articles = () => {
                 const distanceB = parseFloat(b.distance);
                 return distanceA - distanceB;
             } else if (selectedSort === 'rating') {
-                const ratingA = parseFloat(a.rating);
-                const ratingB = parseFloat(b.rating);
+                const ratingA = parseFloat(a.rating) / parseFloat(a.reviews);
+                const ratingB = parseFloat(b.rating) / parseFloat(b.reviews);
                 return ratingB - ratingA;
             }
             return 0;
